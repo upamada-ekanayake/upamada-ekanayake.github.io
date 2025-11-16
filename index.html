@@ -7,127 +7,98 @@
 <meta name="description" content="Upamada Ekanayake — AI & Data Science Student. Projects: AI Finance Tool, ML models, Java web apps."/>
 <link rel="icon" href="https://raw.githubusercontent.com/github/explore/main/topics/data-science/data-science.png">
 <style>
-  :root{
-    --bg:#0f1724; --panel:#0b1220; --muted:#9aa4b2; --text:#e6eef6; --accent:#00e0ff;
-    --glass: rgba(255,255,255,0.04);
-  }
-  [data-theme="light"]{
-    --bg:#f6f8fb; --panel:#ffffff; --muted:#475569; --text:#0b1220; --accent:#0066ff; --glass: rgba(11,18,32,0.04);
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:linear-gradient(180deg,var(--bg),#071024);-webkit-font-smoothing:antialiased}
-  .container{max-width:980px;margin:36px auto;padding:24px}
-  .card{background:var(--panel);border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-  header{display:flex;gap:18px;align-items:center}
-  .avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;border:2px solid rgba(255,255,255,0.06)}
-  h1{margin:0;font-size:26px}
-  .tagline{color:var(--muted);margin-top:6px}
-  .actions{margin-left:auto;display:flex;gap:8px;align-items:center}
-  .btn{background:linear-gradient(90deg,var(--accent),#6ad9ff);border:none;padding:8px 12px;border-radius:10px;color:#001425;font-weight:600;cursor:pointer}
-  .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:10px;color:var(--text);cursor:pointer}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
-  .skill{padding:10px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;gap:10px}
-  .skill img{width:28px;height:28px}
-  .projects .project{padding:12px;border-radius:10px;background:var(--glass);display:flex;gap:12px;align-items:flex-start}
-  .project img{width:64px;height:64px;border-radius:8px;object-fit:cover}
-  .muted{color:var(--muted)}
-  .center{text-align:center}
-  footer{color:var(--muted);font-size:13px;padding:18px;text-align:center}
-  .toggle{display:inline-flex;align-items:center;gap:8px;padding:6px 8px;border-radius:999px;background:var(--glass);cursor:pointer}
-  pre{background:transparent;padding:10px;border-radius:8px;overflow:auto;color:var(--muted)}
-  a.link{color:var(--accent);text-decoration:none;font-weight:600}
-  @media (max-width:640px){header{flex-direction:column;align-items:flex-start}.actions{margin-left:0;width:100%;display:flex;justify-content:space-between}}
+  :root{--bg:#0f1724;--panel:#0b1220;--muted:#9aa4b2;--text:#e6eef6;--accent:#00e0ff;--glass: rgba(255,255,255,0.04)}
+  [data-theme="light"]{--bg:#f6f8fb;--panel:#ffffff;--muted:#475569;--text:#0b1220;--accent:#0066ff;--glass: rgba(11,18,32,0.04)}
+  *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:linear-gradient(180deg,var(--bg),#071024);-webkit-font-smoothing:antialiased}
+  .container{max-width:980px;margin:36px auto;padding:24px}.card{background:var(--panel);border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+  header{display:flex;gap:18px;align-items:center}.avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;border:2px solid rgba(255,255,255,0.06)}h1{margin:0;font-size:26px}.tagline{color:var(--muted);margin-top:6px}.actions{margin-left:auto;display:flex;gap:8px;align-items:center}.btn{background:linear-gradient(90deg,var(--accent),#6ad9ff);border:none;padding:8px 12px;border-radius:10px;color:#001425;font-weight:600;cursor:pointer}.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:10px;color:var(--text);cursor:pointer}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}.skill{padding:10px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;gap:10px}.skill img{width:28px;height:28px}.projects .project{padding:12px;border-radius:10px;background:var(--glass);display:flex;gap:12px;align-items:flex-start}.project img{width:64px;height:64px;border-radius:8px;object-fit:cover}.muted{color:var(--muted)}.center{text-align:center}footer{color:var(--muted);font-size:13px;padding:18px;text-align:center}.toggle{display:inline-flex;align-items:center;gap:8px;padding:6px 8px;border-radius:999px;background:var(--glass);cursor:pointer}pre{background:transparent;padding:10px;border-radius:8px;overflow:auto;color:var(--muted)}a.link{color:var(--accent);text-decoration:none;font-weight:600}@media (max-width:640px){header{flex-direction:column;align-items:flex-start}.actions{margin-left:0;width:100%;display:flex;justify-content:space-between}}
 </style>
 </head>
 <body data-theme="dark">
-  <main class="container">
-    <div class="card" role="banner">
-      <header>
-        <img class="avatar" src="https://raw.githubusercontent.com/upamada-ekanayake/upamada-ekanayake.github.io/main/avatar.jpg" alt="avatar (replace with yours)">
-        <div>
-          <h1>Upamada Ekanayake</h1>
-          <div class="tagline">🚀 AI & Data Science Student &nbsp;•&nbsp; Python • Java • Machine Learning</div>
-          <div style="margin-top:10px;color:var(--muted);font-size:14px">Building practical AI tools, ML models, and full-stack projects. Looking for internships & collaboration.</div>
-          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="link" href="https://github.com/upamada-ekanayake" target="_blank" rel="noopener">GitHub</a>
-            <a class="link" href="https://wa.me/94762763973" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="link" href="mailto:upamadaekanayake@gmail.com">Email</a>
-            <a class="link" href="https://raw.githubusercontent.com/upamada-ekanayake/upamada-ekanayake.github.io/main/resume.pdf" target="_blank" rel="noopener">Resume</a>
-          </div>
-        </div>
+  <main class="container">
+    <div class="card" role="banner">
+      <header>
+        <img class="avatar" src="https://github.com/upamada-ekanayake.png" alt="avatar (replace with yours)">
+        <div>
+          <h1>Upamada Ekanayake</h1>
+          <div class="tagline">🚀 AI & Data Science Student • Python • Java • Machine Learning</div>
+          <div style="margin-top:10px;color:var(--muted);font-size:14px">Building practical AI tools, ML models, and full-stack projects.</div>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="link" href="https://github.com/upamada-ekanayake" target="_blank" rel="noopener">GitHub</a>
+            <a class="link" href="https://wa.me/94762763973" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="link" href="mailto:upamadaekanayake@gmail.com">Email</a>
+            <a class="link" href="https://raw.githubusercontent.com/upamada-ekanayake/upamada-ekanayake.github.io/main/resume.pdf" target="_blank" rel="noopener">Resume</a>
+          </div>
+        </div>
+        <div class="actions" aria-hidden="false">
+          <button id="themeToggle" class="ghost toggle" title="Toggle theme">🌙 Theme</button>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+      </header>
+    </div>
 
-        <div class="actions" aria-hidden="false">
-          <button id="themeToggle" class="ghost toggle" title="Toggle theme">🌙 Theme</button>
-          <a class="btn" href="#projects">View Projects</a>
-        </div>
-      </header>
-    </div>
+    <section class="card">
+      <h2>About me</h2>
+      <p class="muted">I'm an AI & Data Science student who started my degree in April 2024. I focus on machine learning, API integrations, automation and building end-to-end projects that solve real problems.</p>
+      <div style="margin-top:12px"><strong>Current focus:</strong> Advanced ML algorithms, MLOps basics, AI product development.</div>
+    </section>
 
-    <section class="card">
-      <h2>About me</h2>
-      <p class="muted">I'm an AI & Data Science student who started my degree in April 2024. I focus on machine learning, API integrations, automation and building end-to-end projects that solve real problems.</p>
+    <section id="skills" class="card">
+      <h2>Tech stack</h2>
+      <div class="grid">
+        <div class="skill"><img src="https://img.icons8.com/color/48/python--v1.png" alt="python"> Python</div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java"> Java</div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/sql.png" alt="sql"> MySQL / SQL</div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/tensorflow.png" alt="tf"> TensorFlow / PyTorch</div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/pandas.png" alt="pandas"> Pandas / NumPy</div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/github--v1.png" alt="git"> Git & GitHub</div>
+      </div>
+    </section>
 
-      <div style="margin-top:12px">
-        <strong>Current focus:</strong> Advanced ML algorithms, MLOps basics, AI product development.
-      </div>
-    </section>
+    <section id="projects" class="card projects">
+      <h2>Featured projects</h2>
+      <div class="grid">
+        <div class="project">
+          <img src="https://img.icons8.com/color/96/combo-chart--v1.png" alt="AI Finance">
+          <div>
+            <strong>AI Finance Tool (Python + APIs)</strong>
+            <div class="muted" style="margin-top:6px">Automated asset tracking, API integrations and dashboarding.</div>
+            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/ai-finance-tool" target="_blank">View repo</a></div>
+          </div>
+        </div>
 
-    <section id="skills" class="card">
-      <h2>Tech stack</h2>
-      <div class="grid">
-        <div class="skill"><img src="https://img.icons8.com/color/48/python--v1.png" alt="python"> Python</div>
-        <div class="skill"><img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java"> Java</div>
-        <div class="skill"><img src="https://img.icons8.com/color/48/sql.png" alt="sql"> MySQL / SQL</div>
-        <div class="skill"><img src="https://img.icons8.com/color/48/tensorflow.png" alt="tf"> TensorFlow / PyTorch</div>
-        <div class="skill"><img src="https://img.icons8.com/color/48/pandas.png" alt="pandas"> Pandas / NumPy</div>
-        <div class="skill"><img src="https://img.icons8.com/color/48/github--v1.png" alt="git"> Git & GitHub</div>
-      </div>
-    </section>
+        <div class="project">
+          <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="ML">
+          <div>
+            <strong>ML Prediction Model</strong>
+            <div class="muted" style="margin-top:6px">Full ML workflow: data cleaning, feature engineering, training, evaluation and deployment experiments.</div>
+            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/ml-prediction-model" target="_blank">View repo</a></div>
+          </div>
+        </div>
 
-    <section id="projects" class="card projects">
-      <h2>Featured projects</h2>
-      <div class="grid">
-        <div class="project">
-          <img src="https://img.icons8.com/color/96/combo-chart--v1.png" alt="AI Finance">
-          <div>
-            <strong>AI Finance Tool (Python + APIs)</strong>
-            <div class="muted" style="margin-top:6px">Automated asset tracking, API integrations and dashboarding. Real-time data pipelines and alerting.</div>
-            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/ai-finance-tool" target="_blank">View repo</a></div>
-          </div>
-        </div>
+        <div class="project">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java">
+          <div>
+            <strong>Movie Booking Website (Java + MySQL)</strong>
+            <div class="muted" style="margin-top:6px">Full website with auth, seat booking, and MySQL-backed storage. Frontend with HTML/CSS and Tailwind CSS.</div>
+            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/movie-booking" target="_blank">View repo</a></div>
+          </div>
+        </div>
 
-        <div class="project">
-          <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="ML">
-          <div>
-            <strong>ML Prediction Model</strong>
-            <div class="muted" style="margin-top:6px">Full ML workflow: data cleaning, feature engineering, training, evaluation and deployment experiments.</div>
-            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/ml-prediction-model" target="_blank">View repo</a></div>
-          </div>
-        </div>
+        <div class="project">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="web">
+          <div>
+            <strong>Portfolio Website (HTML/CSS/JS)</strong>
+            <div class="muted" style="margin-top:6px">This site — clean, responsive, and easy to maintain. Hosted on GitHub Pages.</div>
+            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/upamada-ekanayake.github.io" target="_blank">View site repo</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="project">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java">
-          <div>
-            <strong>Movie Booking Website (Java + MySQL)</strong>
-            <div class="muted" style="margin-top:6px">Full website with auth, seat booking, and MySQL-backed storage. Frontend with HTML/CSS and Tailwind CSS.</div>
-            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/movie-booking" target="_blank">View repo</a></div>
-          </div>
-        </div>
-
-        <div class="project">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="web">
-          <div>
-            <strong>Portfolio Website (HTML/CSS/JS)</strong>
-            <div class="muted" style="margin-top:6px">This site — clean, responsive, and easy to maintain. Hosted on GitHub Pages.</div>
-            <div style="margin-top:8px"><a class="link" href="https://github.com/upamada-ekanayake/upamada-ekanayake.github.io" target="_blank">View site repo</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="journey" class="card">
-      <h2>Learning journey</h2>
-      <pre>
+    <section id="journey" class="card">
+      <h2>Learning journey</h2>
+      <pre>
 2024 April — Started Data Science Degree
 2024 — Learned Java Basics
 2024 — Built First Small Java Website
@@ -136,47 +107,41 @@
 2025 — Learned MySQL + Integrated SQL into Java Website
 2025 — Built Full Java Website (HTML, CSS, Tailwind CSS)
 2025 — Created First Machine Learning Project in Python
-      </pre>
-    </section>
+      </pre>
+    </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn" href="https://wa.me/94762763973" target="_blank">Message on WhatsApp</a>
-        <a class="ghost" href="mailto:upamadaekanayake@gmail.com">Email me</a>
-        <a class="ghost" href="https://raw.githubusercontent.com/upamada-ekanayake/upamada-ekanayake.github.io/main/resume.pdf" target="_blank">Download résumé</a>
-      </div>
-      <div style="margin-top:12px;color:var(--muted)">You can replace `resume.pdf` with a real URL or upload a resume file to the repo.</div>
-    </section>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn" href="https://wa.me/94762763973" target="_blank">Message on WhatsApp</a>
+        <a class="ghost" href="mailto:upamadaekanayake@gmail.com">Email me</a>
+        <a class="ghost" href="https://raw.githubusercontent.com/upamada-ekanayake/upamada-ekanayake.github.io/main/resume.pdf" target="_blank">Download résumé</a>
+      </div>
+      <div style="margin-top:12px;color:var(--muted)">You can replace `resume.pdf` with a real URL or upload a resume file to the repo.</div>
+    </section>
 
-    <footer>
-      © <span id="year"></span> Upamada Ekanayake — Built with ❤️ • Hosted on GitHub Pages
-    </footer>
-  </main>
+    <footer>
+      © <span id="year"></span> Upamada Ekanayake — Built with ❤️ • Hosted on GitHub Pages
+    </footer>
+  </main>
 
 <script>
-  // small JS: theme toggle + year
-  (function(){
-    const root = document.documentElement;
-    const body = document.body;
-    const button = document.getElementById('themeToggle');
-    const yearEl = document.getElementById('year');
-    yearEl.textContent = new Date().getFullYear();
-
-    // load saved theme
-    const saved = localStorage.getItem('theme');
-    if(saved) body.setAttribute('data-theme', saved);
-    else body.setAttribute('data-theme','dark');
-
-    button.addEventListener('click', ()=>{
-      const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      body.setAttribute('data-theme', current);
-      localStorage.setItem('theme', current);
-      button.textContent = current === 'dark' ? '🌙 Theme' : '☀️ Theme';
-    });
-    // set initial button text
-    button.textContent = body.getAttribute('data-theme') === 'dark' ? '🌙 Theme' : '☀️ Theme';
-  })();
+  (function(){
+    const body = document.body;
+    const button = document.getElementById('themeToggle');
+    const yearEl = document.getElementById('year');
+    yearEl.textContent = new Date().getFullYear();
+    const saved = localStorage.getItem('theme');
+    if(saved) body.setAttribute('data-theme', saved);
+    else body.setAttribute('data-theme','dark');
+    button.addEventListener('click', ()=>{
+      const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+      button.textContent = current === 'dark' ? '🌙 Theme' : '☀️ Theme';
+    });
+    button.textContent = body.getAttribute('data-theme') === 'dark' ? '🌙 Theme' : '☀️ Theme';
+  })();
 </script>
 </body>
 </html>
