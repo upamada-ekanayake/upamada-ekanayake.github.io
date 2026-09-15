@@ -1,0 +1,134 @@
+/* Blueprint Matrix Grid & Ambient Luminescence System (Light & Dark Theme) */
+
+:root {
+  /* Default: Light Mode (Red, Black, Gray, White) */
+  --grid-line-color: rgba(0, 0, 0, 0.045);
+  --grid-size: 48px;
+  --ambient-bg: #f8fafc;
+  --glow-spot-1: radial-gradient(circle, rgba(239, 68, 68, 0.12) 0%, rgba(220, 38, 38, 0.04) 50%, transparent 75%);
+  --glow-spot-2: radial-gradient(circle, rgba(15, 23, 42, 0.08) 0%, rgba(100, 116, 139, 0.03) 50%, transparent 75%);
+  --scanline-gradient: linear-gradient(90deg, transparent 0%, rgba(239, 68, 68, 0.3) 50%, transparent 100%);
+}
+
+[data-theme="dark"] {
+  --grid-line-color: rgba(255, 255, 255, 0.035);
+  --ambient-bg: #06070a;
+  --glow-spot-1: radial-gradient(circle, rgba(239, 68, 68, 0.18) 0%, rgba(220, 38, 38, 0.08) 45%, transparent 70%);
+  --glow-spot-2: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(37, 99, 235, 0.1) 45%, transparent 70%);
+  --scanline-gradient: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.5) 30%, rgba(239, 68, 68, 0.5) 70%, transparent 100%);
+}
+
+/* Base Ambient Environment */
+.ambient-environment {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--ambient-bg);
+  transition: background-color 0.4s ease;
+}
+
+/* Engineering Matrix Grid Overlay */
+.bg-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-size: var(--grid-size) var(--grid-size);
+  background-image: 
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 60%, transparent 100%);
+  opacity: 0.9;
+  transition: all 0.4s ease;
+}
+
+/* Chromatic Radial Flares */
+.glow-spot-red {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: var(--glow-spot-1);
+  filter: blur(110px);
+  animation: pulse-glow-red 14s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+.glow-spot-blue {
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: var(--glow-spot-2);
+  filter: blur(110px);
+  animation: pulse-glow-blue 12s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+.glow-spot-mid-violet {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.08) 0%, rgba(100, 116, 139, 0.04) 40%, transparent 70%);
+  filter: blur(130px);
+  animation: pulse-glow-violet 18s ease-in-out infinite alternate;
+}
+
+.glow-spot-bottom-red {
+  position: absolute;
+  bottom: -10%;
+  left: 15%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: var(--glow-spot-1);
+  filter: blur(120px);
+  animation: pulse-glow-red 16s ease-in-out infinite alternate;
+}
+
+/* Subtle scanning beam line */
+.cyber-scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--scanline-gradient);
+  opacity: 0.35;
+  top: 0;
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-10vh); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+
+@keyframes pulse-glow-blue {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate(-30px, 40px) scale(1.1); opacity: 0.95; }
+  100% { transform: translate(20px, -20px) scale(0.95); opacity: 0.7; }
+}
+
+@keyframes pulse-glow-red {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+  50% { transform: translate(40px, -30px) scale(1.15); opacity: 0.9; }
+  100% { transform: translate(-20px, 30px) scale(0.9); opacity: 0.65; }
+}
+
+@keyframes pulse-glow-violet {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-45%, -45%) scale(1.2); opacity: 0.8; }
+  100% { transform: translate(-55%, -52%) scale(0.9); opacity: 0.5; }
+}
