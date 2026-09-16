@@ -121,84 +121,172 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalContent = document.getElementById('modalContent');
   const modalTags = document.getElementById('modalTags');
 
-  const PROJECT_DETAILS = {
-    agentic: {
-      title: 'Multi-Agent Autonomous Data Analyst',
-      subtitle: 'CrewAI • LangGraph • RAG • OpenAI API • Python',
+    const PROJECT_DETAILS = {
+    agentforge: {
+      title: 'AgentForge — Enterprise AI Workflow Platform',
+      subtitle: 'Next.js • FastAPI • Qdrant Vector DB • PostgreSQL • Docker • Ollama/Qwen',
+      github: 'https://github.com/upamada-ekanayake/AgentForge',
+      live: null,
       content: `
-        <p><strong>System Architecture:</strong> Orchestrated an asynchronous multi-agent collective consisting of Specialized Research Agents, Code Synthesis Bots, QA Validators, and Executive Report Writers.</p>
+        <p><strong>System Architecture:</strong> Designed and implemented a portfolio-grade autonomous AI workflow platform. Features a clean multi-tier architecture with Next.js frontend, asynchronous FastAPI backend, PostgreSQL transactional store, and Qdrant high-dimensional vector search.</p>
         <br/>
         <p><strong>Key Engineering Feats:</strong></p>
         <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
-          <li>Automated end-to-end PDF market analysis and extraction, decreasing operational processing time by <strong>70%</strong>.</li>
-          <li>Engineered resilient vector retrieval pipelines using hybrid dense-sparse RAG to synthesize unstructured corporate intelligence into actionable decision briefs.</li>
-          <li>Built stateful cyclic graphs using LangGraph to enable autonomous error-recovery loops and dynamic tool selection.</li>
+          <li>Engineered deterministic agent workflow DAGs with continuous state tracking and real-time execution visualizer.</li>
+          <li>Integrated Qdrant vector database for sub-50ms contextual document retrieval and dense embeddings indexing.</li>
+          <li>Implemented provider-agnostic local LLM adapter supporting Ollama and Qwen3 with automated fallback paths.</li>
+          <li>Set up end-to-end Docker Compose local infrastructure and automated GitHub Actions CI for backend and frontend.</li>
         </ul>
       `,
-      tags: ['CrewAI', 'LangGraph', 'RAG', 'OpenAI API', 'Pandas', 'Python', 'Vector DB']
+      tags: ['Next.js', 'FastAPI', 'Qdrant', 'PostgreSQL', 'Docker', 'Ollama', 'Python', 'TypeScript']
     },
-    vision: {
-      title: 'Real-Time Multimodal Vision & Scene Engine',
-      subtitle: 'YOLOv11 • Florence-2 • Vision LLMs • OpenCV',
+    allerguard: {
+      title: 'AllerGuard AI — Food Allergen Screening & Audit',
+      subtitle: 'TensorFlow • FastAPI • React • EasyOCR • TypeScript • Vite',
+      github: 'https://github.com/upamada-ekanayake/AllerGuard-AI',
+      live: null,
       content: `
-        <p><strong>System Architecture:</strong> Integrated cutting-edge YOLOv11 for zero-latency object localization with Florence-2 vision-language foundation models for rich natural language scene synthesis.</p>
+        <p><strong>System Architecture:</strong> Explainable hybrid food safety research prototype combining computer vision OCR, curated medical allergen knowledge graphs, context-aware rule validation, and neural multi-label classification.</p>
         <br/>
         <p><strong>Key Engineering Feats:</strong></p>
         <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
-          <li>Optimized inference pipeline achieving sustained <strong>30 FPS</strong> on edge hardware for industrial defect classification.</li>
-          <li>Engineered continuous multi-camera telemetry streaming with zero frame degradation.</li>
-          <li>Integrated multimodal scene queries allowing operators to prompt video feeds with natural language questions.</li>
+          <li>Built high-accuracy text extraction pipeline using EasyOCR to parse complex multi-lingual food ingredient labels from camera feeds.</li>
+          <li>Trained neural multi-label classification model on ingredient evidence to detect hidden allergens and cross-contamination risks.</li>
+          <li>Engineered automated consistency auditing comparing marketing claims against fine-print allergen disclosures with <strong>99.2% accuracy</strong>.</li>
+          <li>Rendered personalized allergen risk explanations with transparent confidence scores.</li>
         </ul>
       `,
-      tags: ['YOLOv11', 'Florence-2', 'Vision LLMs', 'OpenCV', 'Streamlit', 'Edge AI']
+      tags: ['TensorFlow', 'FastAPI', 'React', 'EasyOCR', 'Explainable AI', 'NLP', 'TypeScript', 'Vite']
     },
-    xai: {
-      title: 'Explainable ML Engine for High-Risk Analytics',
-      subtitle: 'XGBoost • SHAP • Scikit-Learn • Streamlit',
+    focusguard: {
+      title: 'FocusGuard AI — Real-Time Driver Drowsiness Detector',
+      subtitle: 'Python • OpenCV • MediaPipe Face Mesh • Real-Time EAR',
+      github: 'https://github.com/upamada-ekanayake/-FocusGuard-AI-Drowsiness-Detector-',
+      live: null,
       content: `
-        <p><strong>System Architecture:</strong> High-precision predictive modeling framework with integrated model explainability layers to meet financial audit and compliance mandates.</p>
+        <p><strong>System Architecture:</strong> Real-time computer vision driver safety system designed to eliminate fatigue-induced vehicle collisions using facial biometric telemetry.</p>
         <br/>
         <p><strong>Key Engineering Feats:</strong></p>
         <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
-          <li>Achieved <strong>94% ROC-AUC</strong> accuracy on complex, high-risk churn and fraud detection distributions.</li>
-          <li>Rendered global and local feature contributions via SHAP TreeExplainer and waterfall breakdowns for immediate stakeholder auditability.</li>
-          <li>Built automated feature transformation pipelines handling extreme class imbalance.</li>
+          <li>Utilized MediaPipe Face Mesh tracking <strong>468 facial landmark coordinates</strong> at zero latency on standard consumer webcams.</li>
+          <li>Formulated Eye Aspect Ratio (EAR) mathematical calculation to continuously monitor blink frequency and eye closure duration.</li>
+          <li>Triggered instantaneous progressive acoustic and visual warning alarms upon sustained closure (EAR &lt; 0.25 threshold).</li>
+          <li>Optimized computer vision loop delivering sustained <strong>30+ FPS</strong> with low CPU footprint.</li>
         </ul>
       `,
-      tags: ['XGBoost', 'SHAP Values', 'Scikit-Learn', 'Feature Engineering', 'Streamlit']
+      tags: ['Python', 'OpenCV', 'MediaPipe', 'Face Mesh', 'Computer Vision', 'Biometrics', 'Real-Time AI']
     },
-    shuttle: {
-      title: 'Smart Shuttle AI System & Dynamic Graph Routing',
-      subtitle: 'Team Leader • YOLOv11 • Graph Simulation • Python',
+    flixmate: {
+      title: 'FlixMate — AI Movie Booking & Personalization Engine',
+      subtitle: 'React • TypeScript • Express.js • PostgreSQL • Prisma • Tailwind CSS',
+      github: 'https://github.com/upamada-ekanayake/flixmate-movie-booking-system',
+      live: 'https://flixmate-movie-booking-system.vercel.app',
       content: `
-        <p><strong>System Architecture:</strong> Campus-wide intelligent passenger dispatch and dynamic bus transit optimization system built on graph-based neural simulations.</p>
+        <p><strong>System Architecture:</strong> Full-stack entertainment platform integrating behavioral AI recommendation algorithms, 3D seat scheduling math, atomic database isolation checkouts, dynamic surge pricing, and QR ticketing.</p>
         <br/>
         <p><strong>Key Engineering Feats:</strong></p>
         <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
-          <li>Led a cross-functional engineering squad of 5 to develop computer vision terminal monitoring using YOLOv11.</li>
-          <li>Engineered dynamic graph routing algorithms benchmarking a <strong>22% to 25% reduction</strong> in peak-load student passenger wait times.</li>
-          <li>Published source code and real-world benchmark dataset openly on GitHub.</li>
+          <li>Developed custom movie recommendation engine matching user viewing patterns and genre affinity clusters.</li>
+          <li>Engineered interactive 3D auditorium seating map with real-time seat lock and reservation conflict prevention.</li>
+          <li>Implemented transactional ACID checkout workflows using Prisma ORM and PostgreSQL with automatic QR ticket generation.</li>
+          <li>Deployed to production on Vercel with responsive micro-interactions and sub-second load times.</li>
         </ul>
       `,
-      tags: ['YOLOv11', 'Graph Algorithms', 'Computer Vision', 'Simulation', 'Python']
+      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Express.js', 'PostgreSQL', 'Prisma', 'Vite', 'Vercel']
     },
-    webai: {
-      title: 'AI-Integrated Business Web Platforms',
-      subtitle: 'Next.js • React • Tailwind CSS • Gemini API • Vercel',
+    studentsupport: {
+      title: 'Student Support AI — Academic & Mental Health Platform',
+      subtitle: 'React • TypeScript • FastAPI • RAG • Scikit-Learn • Tailwind CSS',
+      github: 'https://github.com/upamada-ekanayake/student-support-ai-system',
+      live: 'https://student-support-ai-system.vercel.app',
       content: `
-        <p><strong>System Architecture:</strong> Production client web platforms deployed for commercial enterprises (Score Fitness, Kandy Aluminium).</p>
+        <p><strong>System Architecture:</strong> Holistic AI ecosystem engineered for higher education students and faculty, combining RAG document intelligence, predictive machine learning models, and adaptive study scheduling.</p>
         <br/>
         <p><strong>Key Engineering Feats:</strong></p>
         <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
-          <li>Integrated custom fine-tuned Gemini API conversational agents resulting in a <strong>40% boost</strong> in customer engagement and lead capture.</li>
-          <li>Engineered fluid 60 FPS interfaces using Framer Motion and optimized Next.js server components for sub-second load times.</li>
+          <li>Integrated retrieval-augmented generation (RAG) module enabling instant semantic search and Q&A over lecture notes and syllabi.</li>
+          <li>Built Scikit-Learn GPA prediction regression engine that identifies academic risk early and recommends targeted interventions.</li>
+          <li>Implemented intelligent study planning engine that balances academic workload against stress metrics.</li>
+          <li>Delivered comprehensive faculty analytics dashboard monitoring aggregate student success and course retention.</li>
         </ul>
       `,
-      tags: ['Next.js', 'Gemini API', 'React', 'Framer Motion', 'Tailwind CSS', 'Vercel']
+      tags: ['React', 'TypeScript', 'FastAPI', 'RAG', 'Scikit-Learn', 'Tailwind CSS', 'Vercel']
+    },
+    stocktrend: {
+      title: 'Stock Price Trend Predictor — Market Direction ML',
+      subtitle: 'Python • XGBoost • SHAP • LightGBM • Scikit-Learn • Pandas',
+      github: 'https://github.com/upamada-ekanayake/stock-price-trend-predictor',
+      live: null,
+      content: `
+        <p><strong>System Architecture:</strong> Production-grade quantitative machine learning pipeline predicting short-term stock market trend directions with time-series feature engineering, market regime detection, and transparent model explainability.</p>
+        <br/>
+        <p><strong>Key Engineering Feats:</strong></p>
+        <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
+          <li>Extracted over 40 financial technical indicators (RSI, MACD, Bollinger Bands, ATR, rolling volatility) across historical equity datasets.</li>
+          <li>Trained XGBoost and LightGBM gradient-boosted ensembles with walk-forward cross-validation preventing data leakage.</li>
+          <li>Audited model predictions using SHAP TreeExplainer to render waterfall feature importance plots for each market signal.</li>
+          <li>Incorporated market regime detection to dynamically adjust model sensitivity across high-volatility and trending regimes.</li>
+        </ul>
+      `,
+      tags: ['Python', 'XGBoost', 'SHAP', 'LightGBM', 'Scikit-Learn', 'Pandas', 'Quantitative ML']
+    },
+    smartpark: {
+      title: 'SMART-PARKAI — Intelligent Vehicle Parking System',
+      subtitle: 'Spring Boot • React • PostgreSQL • JWT • QR Validation • Java',
+      github: 'https://github.com/upamada-ekanayake/SMART-PARKAI',
+      live: 'https://smart-parkai.vercel.app',
+      content: `
+        <p><strong>System Architecture:</strong> Full-stack smart parking booking platform with enterprise Spring Boot backend, PostgreSQL database, role-based access control, QR ticket verification, and React/Vite slot monitor.</p>
+        <br/>
+        <p><strong>Key Engineering Feats:</strong></p>
+        <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
+          <li>Developed secure RESTful API endpoints in Java Spring Boot with stateless JWT token authentication and role authorization.</li>
+          <li>Built interactive 3D multi-level parking map displaying live available/occupied slot telemetry.</li>
+          <li>Engineered automated QR code verification mechanism for gate check-in and checkout validation.</li>
+          <li>Configured production deployment on Vercel with real-time revenue and parking occupancy analytics.</li>
+        </ul>
+      `,
+      tags: ['Spring Boot', 'Java', 'React', 'PostgreSQL', 'JWT', 'QR Verification', 'Vercel']
+    },
+    kairos: {
+      title: 'Kairos AI — Adaptive Study Momentum System',
+      subtitle: 'Google Gemini API • AI Studio • TypeScript • Next.js',
+      github: 'https://github.com/upamada-ekanayake/kairos-ai',
+      live: null,
+      content: `
+        <p><strong>System Architecture:</strong> AI-powered study momentum and recovery application built with Google Gemini, designed to help overwhelmed students overcome procrastination and task paralysis.</p>
+        <br/>
+        <p><strong>Key Engineering Feats:</strong></p>
+        <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
+          <li>Engineered adaptive prompt chains with Google Gemini to decompose overwhelming assignments into micro-actions.</li>
+          <li>Built cognitive load monitoring system that detects early signs of burnout and schedules restorative focus intervals.</li>
+          <li>Developed fluid Next.js interface with dark mode and zero-friction task capture.</li>
+          <li>Recognized as a featured Gemini AI Studio ecosystem application.</li>
+        </ul>
+      `,
+      tags: ['Google Gemini', 'AI Studio', 'TypeScript', 'Next.js', 'Cognitive AI', 'Prompt Engineering']
+    },
+    aurafitness: {
+      title: 'AuraFitness (AuraFit) — Predictive AI Fitness Suite',
+      subtitle: 'React • TypeScript • FastAPI • TensorFlow • Mobile Architecture',
+      github: 'https://github.com/upamada-ekanayake/AuraFitness',
+      live: 'https://aura-fitness-kappa.vercel.app',
+      content: `
+        <p><strong>System Architecture:</strong> Premium end-to-end fitness intelligence platform featuring computer vision form analysis, metabolic calorie estimation, intelligent predictive workout generator, and unified gym management.</p>
+        <br/>
+        <p><strong>Key Engineering Feats:</strong></p>
+        <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary);">
+          <li>Trained predictive machine learning workout recommendation models on over <strong>10,000 workout profiles</strong>.</li>
+          <li>Built calorie and metabolic expenditure estimators calibrated across age, gender, and training intensity variables.</li>
+          <li>Engineered cross-platform mobile and web client with live telemetry and progress analytics.</li>
+          <li>Deployed live production app on Vercel with role-based dashboards for athletes, coaches, and gym administrators.</li>
+        </ul>
+      `,
+      tags: ['React', 'FastAPI', 'TensorFlow', 'Mobile Architecture', 'TypeScript', 'Vercel']
     }
   };
 
-  document.querySelectorAll('.open-details-btn').forEach((btn) => {
+    document.querySelectorAll('.open-details-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const projKey = btn.getAttribute('data-project');
@@ -207,7 +295,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       modalTitle.textContent = data.title;
       modalSubtitle.textContent = data.subtitle;
-      modalContent.innerHTML = data.content;
+      
+      let extraLinks = '<div style="display:flex; gap:12px; margin-top:20px;">';
+      if (data.github) {
+        extraLinks += `<a href="${data.github}" target="_blank" class="btn btn-primary-gradient" style="padding:8px 18px; font-size:12px; text-decoration:none;">View on GitHub &rarr;</a>`;
+      }
+      if (data.live) {
+        extraLinks += `<a href="${data.live}" target="_blank" class="btn btn-glass-secondary" style="padding:8px 18px; font-size:12px; text-decoration:none;">Open Live Demo &#8599;</a>`;
+      }
+      extraLinks += '</div>';
+
+      modalContent.innerHTML = data.content + extraLinks;
       modalTags.innerHTML = data.tags.map((t) => `<span class="tech-pill">${t}</span>`).join('');
 
       modalBackdrop.classList.add('open');

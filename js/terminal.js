@@ -36,12 +36,16 @@ Explainable ML (XGBoost + SHAP), and scalable MLOps architectures.
 • <strong style="color:#fff">Data & MLOps:</strong> Model Deployment, REST APIs, Streamlit, Gradio, Pandas, NumPy
 `,
     projects: `
-<span style="color:#ef4444">FEATURED SYSTEMS:</span>
-1. <span style="color:#fff">Multi-Agent Autonomous Data Analyst</span> [CrewAI, LangGraph, RAG] → Cut report generation time by 70%.
-2. <span style="color:#fff">Explainable ML Engine for High-Risk Analytics</span> [XGBoost, SHAP] → 94% ROC-AUC accuracy.
-3. <span style="color:#fff">Real-Time Multimodal Vision & Scene Engine</span> [YOLOv11, Florence-2] → 30 FPS defect detection.
-4. <span style="color:#fff">Smart Shuttle AI System</span> [Team Lead, YOLOv11] → 25% passenger wait time drop.
-5. <span style="color:#fff">AI Business Web Platforms</span> [Next.js, Gemini API] → Commercial client engagement +40%.
+<span style="color:#ef4444">FEATURED GITHUB ARSENAL:</span>
+1. <span style="color:#fff">AgentForge</span> [Next.js, FastAPI, Qdrant, Docker] -> Autonomous AI workflow platform & execution visualizer.
+2. <span style="color:#fff">AllerGuard AI</span> [TensorFlow, EasyOCR, FastAPI, React] -> Explainable food-label allergen screening (99.2% audit accuracy).
+3. <span style="color:#fff">FocusGuard AI</span> [Python, MediaPipe Face Mesh, OpenCV] -> Real-time driver drowsiness detector (30+ FPS, 468 landmarks).
+4. <span style="color:#fff">FlixMate Platform</span> [React, TypeScript, Express, PostgreSQL] -> AI movie ticketing & 3D seat scheduling engine (Live on Vercel).
+5. <span style="color:#fff">Student Support AI</span> [RAG, Scikit-Learn, FastAPI, React] -> Academic success & GPA prediction ecosystem (Live on Vercel).
+6. <span style="color:#fff">Stock Price Predictor</span> [XGBoost, SHAP, LightGBM, Pandas] -> Market trend direction forecasting with regime detection.
+7. <span style="color:#fff">SMART-PARKAI</span> [Spring Boot, PostgreSQL, React, QR Auth] -> Intelligent vehicle space reservation platform (Live on Vercel).
+8. <span style="color:#fff">Kairos AI</span> [Google Gemini API, AI Studio, Next.js] -> Adaptive study momentum & anti-burnout system.
+9. <span style="color:#fff">AuraFitness AI</span> [React, FastAPI, TensorFlow, Computer Vision] -> Predictive fitness & workout suite trained on 10,000+ entries.
 `,
     research: `
 <span style="color:#a855f7">RESEARCH INITIATIVES:</span>
